@@ -1,0 +1,8 @@
+{
+    "app_name": "bizaxl_assets",
+    "display_name": "BizAxl Assets",
+    "description": "Asset Management",
+    "show_modules": ["BizAxl Assets"],
+    "hide_modules": [],
+    "optional_modules": []
+}

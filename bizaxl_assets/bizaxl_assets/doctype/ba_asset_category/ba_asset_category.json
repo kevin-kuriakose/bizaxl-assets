@@ -1,0 +1,24 @@
+{
+    "name": "BA Asset Category",
+    "doctype": "DocType",
+    "module": "BizAxl Assets",
+    "autoname": "field:asset_category_name",
+    "fields": [
+        {"fieldname": "asset_category_name", "fieldtype": "Data", "label": "Category Name", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "depreciation_method", "fieldtype": "Select", "label": "Depreciation Method",
+         "options": "Straight Line\nDouble Declining Balance\nWritten Down Value", "default": "Straight Line", "in_list_view": 1},
+        {"fieldname": "total_number_of_depreciations", "fieldtype": "Int", "label": "Total Depreciations", "default": "5"},
+        {"fieldname": "frequency_of_depreciation", "fieldtype": "Select", "label": "Frequency",
+         "options": "Monthly\nQuarterly\nYearly", "default": "Yearly"},
+        {"fieldname": "col1", "fieldtype": "Column Break"},
+        {"fieldname": "depreciation_account", "fieldtype": "Link", "label": "Depreciation Account", "options": "BA Account"},
+        {"fieldname": "accumulated_depreciation_account", "fieldtype": "Link", "label": "Accumulated Depreciation Account", "options": "BA Account"},
+        {"fieldname": "fixed_asset_account", "fieldtype": "Link", "label": "Fixed Asset Account", "options": "BA Account"},
+        {"fieldname": "capital_work_in_progress_account", "fieldtype": "Link", "label": "CWIP Account", "options": "BA Account"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Accounts Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "All", "read": 1}
+    ]
+}

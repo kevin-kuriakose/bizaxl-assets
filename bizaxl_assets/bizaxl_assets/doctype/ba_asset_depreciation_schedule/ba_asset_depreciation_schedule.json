@@ -1,0 +1,13 @@
+{
+    "name": "BA Asset Depreciation Schedule",
+    "doctype": "DocType",
+    "module": "BizAxl Assets",
+    "istable": 1,
+    "fields": [
+        {"fieldname": "schedule_date", "fieldtype": "Date", "label": "Date", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "depreciation_amount", "fieldtype": "Currency", "label": "Depreciation Amount", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "accumulated_depreciation_amount", "fieldtype": "Currency", "label": "Accumulated", "in_list_view": 1},
+        {"fieldname": "journal_entry", "fieldtype": "Link", "label": "Journal Entry", "options": "BA Journal Entry", "read_only": 1},
+        {"fieldname": "is_depreciated", "fieldtype": "Check", "label": "Depreciated", "default": "0"}
+    ]
+}

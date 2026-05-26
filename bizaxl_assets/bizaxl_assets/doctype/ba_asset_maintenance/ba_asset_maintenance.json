@@ -1,0 +1,26 @@
+{
+    "name": "BA Asset Maintenance",
+    "doctype": "DocType",
+    "module": "BizAxl Assets",
+    "autoname": "naming_series:",
+    "naming_series": "AMT-.YYYY.-",
+    "fields": [
+        {"fieldname": "naming_series", "fieldtype": "Select", "options": "AMT-.YYYY.-"},
+        {"fieldname": "asset", "fieldtype": "Link", "label": "Asset", "options": "BA Asset", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "maintenance_type", "fieldtype": "Select", "label": "Type",
+         "options": "Preventive\nCalibration\nSafety\nBrake Down", "in_list_view": 1},
+        {"fieldname": "maintenance_date", "fieldtype": "Date", "label": "Date", "reqd": 1, "default": "Today", "in_list_view": 1},
+        {"fieldname": "next_maintenance_date", "fieldtype": "Date", "label": "Next Date"},
+        {"fieldname": "col1", "fieldtype": "Column Break"},
+        {"fieldname": "assign_to", "fieldtype": "Link", "label": "Assigned To", "options": "User"},
+        {"fieldname": "maintenance_status", "fieldtype": "Select", "label": "Status",
+         "options": "Planned\nIn Progress\nCompleted\nCancelled", "default": "Planned", "in_list_view": 1},
+        {"fieldname": "cost", "fieldtype": "Currency", "label": "Maintenance Cost"},
+        {"fieldname": "description", "fieldtype": "Text", "label": "Description"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Accounts Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Accounts User", "read": 1, "write": 1, "create": 1}
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "BA Asset Movement",
+    "doctype": "DocType",
+    "module": "BizAxl Assets",
+    "autoname": "naming_series:",
+    "naming_series": "AM-.YYYY.-",
+    "is_submittable": 1,
+    "fields": [
+        {"fieldname": "naming_series", "fieldtype": "Select", "options": "AM-.YYYY.-"},
+        {"fieldname": "asset", "fieldtype": "Link", "label": "Asset", "options": "BA Asset", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "purpose", "fieldtype": "Select", "label": "Purpose",
+         "options": "Transfer\nIssue\nReturn", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "transaction_date", "fieldtype": "Date", "label": "Date", "reqd": 1, "default": "Today", "in_list_view": 1},
+        {"fieldname": "col1", "fieldtype": "Column Break"},
+        {"fieldname": "from_location", "fieldtype": "Data", "label": "From Location"},
+        {"fieldname": "to_location", "fieldtype": "Data", "label": "To Location"},
+        {"fieldname": "from_custodian", "fieldtype": "Link", "label": "From Custodian", "options": "User"},
+        {"fieldname": "to_custodian", "fieldtype": "Link", "label": "To Custodian", "options": "User"},
+        {"fieldname": "notes", "fieldtype": "Text", "label": "Notes"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1},
+        {"role": "Accounts Manager", "read": 1, "write": 1, "create": 1, "submit": 1},
+        {"role": "Accounts User", "read": 1, "write": 1, "create": 1}
+    ]
+}
